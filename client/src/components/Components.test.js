@@ -84,14 +84,15 @@ describe('components', () => {
           
 
             // /////HIT BUTTON////////
-            // //find hit button
-            // const hit = getByText(/^hit$/i)
+            //find hit button
+            const hit = getByText(/^hit$/i)
             
-            // //click button
-            // fireEvent.click(hit)
+            //click button
+            fireEvent.click(hit)
 
-            // //hit behavior
-            // getAllByText(/1/i)
+            //hit behavior
+            expect(getByText(/balls: 0/i)).toBeTruthy
+            expect(getByText(/strikes: 0/i)).toBeTruthy
 
         })
 

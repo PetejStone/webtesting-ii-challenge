@@ -46,7 +46,7 @@ class App extends React.Component {
   }
 
   hit = () => {
-    this.setState({hits: this.state.hits + 1})
+    this.setState({balls: 0, strikes: 0})
   }
 }
 
