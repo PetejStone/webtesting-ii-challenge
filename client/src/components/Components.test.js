@@ -28,7 +28,7 @@ describe('components', () => {
 
     describe('app buttons behavior', () => {
         it('should render button behavior', () => {
-            const { getByText, getAllByText } = render(<App />)
+            const { getByText, getAllByText, queryByText } = render(<App />)
             /////STRIKE BUTTON????
             //find strike button
             const strike = getByText(/^strike$/i)
@@ -39,9 +39,16 @@ describe('components', () => {
             
 
             //strike behavior
-            getAllByText(/1/i)
+            expect(getByText(/1/i)).toBeTruthy
             
-            /////BALL BUTTON /////////
+            fireEvent.click(strike)
+            expect(getByText(/2/i)).toBeTruthy
+
+            fireEvent.click(strike)
+            expect(getByText(/strikes: 0/i)).toBeTruthy
+            
+            
+            // // /////BALL BUTTON /////////
 
             //find ball button
             const ball = getByText(/^ball$/i)
@@ -50,28 +57,40 @@ describe('components', () => {
             fireEvent.click(ball)
 
             //ball behavior
-            getAllByText(/1/i)
-
-            /////FOUL BUTTON////////
-            //find foul button
-            const foul = getByText(/^foul$/i)
+            expect(getByText(/1/i)).toBeTruthy
             
-            //click button
-            fireEvent.click(foul)
 
-            //foul behavior
-            getAllByText(/1/i)
+            fireEvent.click(ball)
+            expect(getByText(/2/i)).toBeTruthy
 
-            /////hit BUTTON////////
-            //find hit button
-            const hit = getByText(/^hit$/i)
+            fireEvent.click(ball)
+            expect(getByText(/3/i)).toBeTruthy
+
+            fireEvent.click(ball)
+            expect(getByText(/balls: 0/i)).toBeTruthy
+
+            // /////FOUL BUTTON////////
+            // //find foul button
+            // const foul = getByText(/^foul$/i)
             
-            //click button
-            fireEvent.click(hit)
+            // //click button
+            // fireEvent.click(foul)
 
-            //hit behavior
-            getAllByText(/1/i)
+            // //foul behavior
+            // getAllByText(/1/i)
+
+            // /////HIT BUTTON////////
+            // //find hit button
+            // const hit = getByText(/^hit$/i)
+            
+            // //click button
+            // fireEvent.click(hit)
+
+            // //hit behavior
+            // getAllByText(/1/i)
 
         })
+
+    
     })
 })
