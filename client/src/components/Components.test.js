@@ -10,7 +10,7 @@ describe('components', () => {
             const { getByText } = render(<App />)
             getByText(/strikes: 0/i)
             getByText(/balls: 0/i)
-            getByText(/hits: 0/i)
+      
         })
     })
 
