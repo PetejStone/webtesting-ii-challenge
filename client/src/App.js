@@ -14,10 +14,19 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <Dashboard state={this.state} />
+      <Dashboard state={this.state} strike={this.strike} ball={this.ball} foul={this.foul} hit={this.hit}  />
       <Display  state={this.state}/>
     </div>
   );
+  }
+
+   //functions
+   strike = () => {
+    this.setState({strikes: this.state.strikes + 1})
+  }
+
+  ball = () => {
+    this.setState({balls: this.state.balls + 1})
   }
 }
 

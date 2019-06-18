@@ -7,11 +7,13 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <div className="buttons">
-                <button>Strike</button>
-                <button>Ball</button>
+                <button onClick={this.props.strike}>Strike</button>
+                <button onClick={this.props.ball}>Ball</button>
                 <button>Foul</button>
                 <button>Hit</button>
             </div>
         )
     }
+
+    
 }
