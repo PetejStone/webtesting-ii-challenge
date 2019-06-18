@@ -9,8 +9,8 @@ export default class Dashboard extends React.Component {
             <div className="buttons">
                 <button onClick={this.props.strike}>Strike</button>
                 <button onClick={this.props.ball}>Ball</button>
-                <button>Foul</button>
-                <button>Hit</button>
+                <button onClick={this.props.foul}>Foul</button>
+                <button onClick={this.props.hit}>Hit</button>
             </div>
         )
     }

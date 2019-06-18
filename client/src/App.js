@@ -28,6 +28,14 @@ class App extends React.Component {
   ball = () => {
     this.setState({balls: this.state.balls + 1})
   }
+
+  foul = () => {
+    this.setState({fouls: this.state.fouls + 1})
+  }
+
+  hit = () => {
+    this.setState({hits: this.state.hits + 1})
+  }
 }
 
 export default App;

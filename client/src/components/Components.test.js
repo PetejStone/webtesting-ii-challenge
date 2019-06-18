@@ -29,6 +29,7 @@ describe('components', () => {
     describe('app buttons behavior', () => {
         it('should render button behavior', () => {
             const { getByText, getAllByText } = render(<App />)
+            /////STRIKE BUTTON????
             //find strike button
             const strike = getByText(/^strike$/i)
             
@@ -40,14 +41,35 @@ describe('components', () => {
             //strike behavior
             getAllByText(/1/i)
             
-    
-            //find strike button
+            /////BALL BUTTON /////////
+
+            //find ball button
             const ball = getByText(/^ball$/i)
             
             //click button
             fireEvent.click(ball)
 
-            //strike behavior
+            //ball behavior
+            getAllByText(/1/i)
+
+            /////FOUL BUTTON////////
+            //find foul button
+            const foul = getByText(/^foul$/i)
+            
+            //click button
+            fireEvent.click(foul)
+
+            //foul behavior
+            getAllByText(/1/i)
+
+            /////hit BUTTON////////
+            //find hit button
+            const hit = getByText(/^hit$/i)
+            
+            //click button
+            fireEvent.click(hit)
+
+            //hit behavior
             getAllByText(/1/i)
 
         })
