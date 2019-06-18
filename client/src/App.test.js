@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { render, fireEvent } from '@testing-library/react'; // << install this
+import { render} from '@testing-library/react'; // << install this
 import '@testing-library/react/cleanup-after-each';
 
 
@@ -17,20 +17,5 @@ describe('<App />' , () => {
   it('renders without errors', () => {
     const query = render(<App />)
   })
-
  
-  it('renders display scores ', () => {
-    const {getByText} = render(<App />)
-    getByText(/0/i)
-  })
-
-  describe('app buttons', () => {
-    const {getByText} = render(<App />)
-    getByText(/strike/i)
-    getByText(/hit/i)
-    getByText(/foul/i)
-    getByText(/ball/i)
-
-  })
-  
 })

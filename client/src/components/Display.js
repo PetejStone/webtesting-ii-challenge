@@ -8,8 +8,8 @@ export default class Display extends React.Component {
         return (
             <div className="scoreboard">
                 <h2>Strikes: {this.props.state.strikes}</h2>
-                <h2>Balls: {this.props.state.Balls}</h2>
-                <h2>Fouls: {this.props.state.Fouls}</h2>
+                <h2>Balls: {this.props.state.balls}</h2>
+                <h2>Fouls: {this.props.state.fouls}</h2>
                 <h2>Hits: {this.props.state.hits}</h2>
             </div>
         )
