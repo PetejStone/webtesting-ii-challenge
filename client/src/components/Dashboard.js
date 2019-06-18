@@ -6,7 +6,12 @@ export default class Dashboard extends React.Component {
     }
     render() {
         return (
-            <h1>This is the dashboard</h1>
+            <div className="buttons">
+                <button>Strike</button>
+                <button>Ball</button>
+                <button>Foul</button>
+                <button>Hit</button>
+            </div>
         )
     }
 }

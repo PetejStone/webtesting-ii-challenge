@@ -17,5 +17,20 @@ describe('<App />' , () => {
   it('renders without errors', () => {
     const query = render(<App />)
   })
+
+ 
+  it('renders "this is the display" ', () => {
+    const {getByText} = render(<App />)
+    getByText(/this is the display/i)
+  })
+
+  describe('app buttons', () => {
+    const {getByText} = render(<App />)
+    getByText(/strike/i)
+    getByText(/hit/i)
+    getByText(/foul/i)
+    getByText(/ball/i)
+
+  })
   
 })
