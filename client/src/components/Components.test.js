@@ -9,7 +9,6 @@ describe('components', () => {
 
             const { getByText } = render(<App />)
             getByText(/strikes: 0/i)
-            getByText(/fouls: 0/i)
             getByText(/balls: 0/i)
             getByText(/hits: 0/i)
         })
@@ -70,14 +69,19 @@ describe('components', () => {
             expect(getByText(/balls: 0/i)).toBeTruthy
 
             // /////FOUL BUTTON////////
-            // //find foul button
-            // const foul = getByText(/^foul$/i)
+            //find foul button
+            const foul = getByText(/^foul$/i)
             
-            // //click button
-            // fireEvent.click(foul)
+            //click button
+            fireEvent.click(foul)
 
-            // //foul behavior
-            // getAllByText(/1/i)
+            //foul behavior
+            getAllByText(/1/i)
+
+            fireEvent.click(foul)
+            getAllByText(/2/i)
+
+          
 
             // /////HIT BUTTON////////
             // //find hit button

@@ -38,7 +38,11 @@ class App extends React.Component {
   }
 
   foul = () => {
-    this.setState({fouls: this.state.fouls + 1})
+    if(this.state.strikes < 2 ) {
+      this.setState({strikes: this.state.strikes + 1})
+     } else if (this.state.strikes === 2) {
+      this.setState({strikes: 2})
+     }
   }
 
   hit = () => {
