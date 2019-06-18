@@ -19,9 +19,9 @@ describe('<App />' , () => {
   })
 
  
-  it('renders "this is the display" ', () => {
+  it('renders display scores ', () => {
     const {getByText} = render(<App />)
-    getByText(/this is the display/i)
+    getByText(/0/i)
   })
 
   describe('app buttons', () => {
